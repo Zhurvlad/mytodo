@@ -1,0 +1,192 @@
+.tasks {
+
+  &:not(:last-of-type){
+    margin-bottom: 30px;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  &__title {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    color: #64c4ed;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f2f2f2;
+
+    &:hover {
+      img {
+        opacity: 0.2;
+      }
+    }
+
+    img{
+      opacity: 0;
+      margin-left: 15px;
+      cursor: pointer;
+
+      &:hover {
+        opacity:  0.8;
+      }
+    }
+  }
+
+  &__form{
+    margin-top: 20px;
+
+    &-block{
+      .button{
+        margin-right: 10px;
+        margin-top: 15px;
+      }
+    }
+
+    &-new{
+display: flex;
+      align-items: center;
+      cursor: pointer;
+      opacity: 0.4;
+      transition: opacity 0.15s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      img{
+        width: 16px;
+        height: 16px;
+        margin-left: 4px;
+      }
+
+      span{
+        font-size: 16px;
+             margin-left: 20px;
+
+      }
+    }
+  }
+
+  &__item{
+    margin-top: 30px;
+
+    h2{
+      font-family: Montserrat;
+      font-weight: bold;
+      font-size: 26px;
+      color: #C9D1D3;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+    }
+
+    &-row{
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+
+      &:hover &-actions {
+        opacity: 1;
+      }
+
+      &-actions {
+        display: flex;
+        opacity: 0;
+        transition: opacity 0.15s ease-in-out;
+
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+          background-color: lighten(#f4f6f8, 2%);
+          border-radius: 6px;
+          margin-left: 5px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: darken(#f4f6f8, 2%);
+            svg {
+              opacity: 0.9;
+            }
+          }
+
+          svg {
+            width: 11px;
+            height: 11px;
+            opacity: 0.4;
+          }
+        }
+      }
+
+
+
+      p{
+        margin-left: 15px;
+        border: 0;
+        font-size: 16px;
+        width: 100%;
+      }
+    }
+  }
+
+  .checkbox{
+    input{
+      display: none;
+    }
+
+    svg {
+      transition: opacity 0.15s ease-in-out;
+      path{
+        stroke: #f2f2f2;
+      }
+    }
+
+    input:checked + label {
+      background-color: #4DD599;
+      border-color: #4DD599;
+
+      svg{
+        opacity: 1;
+        path{
+          stroke: #ffffff;
+        }
+      }
+    }
+
+    &:hover{
+
+      label{
+        background-color: #f2f2f2;
+        border-color: #f2f2f2;
+        svg{
+          opacity: 1;
+          path{
+            stroke:  #B3B3B3;;
+          }
+        }
+      }
+    }
+
+    label{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: 2px solid #E8E8E8;
+      border-radius: 30px;
+      width: 20px;
+      height: 20px;
+      transition: background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
+
+      svg{
+        opacity: 0;
+      }
+    }
+  }
+}
+

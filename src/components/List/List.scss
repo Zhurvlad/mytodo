@@ -1,0 +1,63 @@
+.list{
+  $self: &;
+
+  margin-bottom: 30px;
+  &__icon-plus{
+    opacity: 0.4;
+
+  }
+
+
+
+  li{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 12px;
+
+    &:hover #{$self}__remove-icon {
+      opacity: 0.3;
+    }
+
+    #{$self}__remove-icon{
+      opacity: 0;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+
+
+    span{
+      flex: 1;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 160px;
+      white-space: nowrap;
+    }
+
+    &:hover{
+     opacity: 1;
+      background: rgba(255, 255, 255 ,0.6);
+    }
+
+
+
+    &.active{
+
+      background: #FFFFFF;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.04);
+      border-radius: 4px;
+    }
+
+    i{
+      display: inline-flex;
+      margin-right: 8px;
+      img{
+        opacity: 0.6;
+      }
+    }
+  }
+
+
+}
